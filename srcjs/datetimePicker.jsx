@@ -379,6 +379,7 @@ class MUIwidget extends React.PureComponent {
           value={this.state.value}
           onChange={this.onChange}
           ampm={false}
+          format="yyyy/MM/dd HH:mm"
           label={this.props.label}
           disableFuture={this.props.disableFuture}
           disablePast={this.props.disablePast}
