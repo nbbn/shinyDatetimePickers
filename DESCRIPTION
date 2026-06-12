@@ -8,8 +8,7 @@ Authors@R: c(
     person("Porinn", role = "cph",
            comment = "'react-datetime-slider-picker' library (https://github.com/Porinn/react-datetime-slider-picker)"),
     person("Dmitriy", "Kovalenko", , "dmtr.kovalenko@outlook.com", role = "cph",
-           comment = "'material-ui-pickers' library (https://github.com/mui-org/material-ui-pickers)"),
-    person("Jakub", "Stępniak", role = c("aut", "cre"))
+           comment = "'material-ui-pickers' library (https://github.com/mui-org/material-ui-pickers)")
   )
 Description: Provides three types of datetime pickers for usage in a
     'Shiny' UI. A datetime picker is an input field for selecting both a
