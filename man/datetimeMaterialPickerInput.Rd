@@ -10,6 +10,7 @@ datetimeMaterialPickerInput(
   value = NULL,
   disablePast = FALSE,
   disableFuture = FALSE,
+  format = "yyyy-MM-dd'T'HH:mm:ss",
   style = NULL
 )
 }
@@ -26,6 +27,12 @@ if \code{NULL}, it is set to the current time}
 \item{disablePast}{logical, whether to disable past dates}
 
 \item{disableFuture}{logical, whether to disable future dates}
+
+\item{format}{a character string giving the date-time display format of the
+input field, using \code{date-fns} tokens (e.g. \code{"yyyy"} for the year,
+\code{"MM"} month, \code{"dd"} day, \code{"HH"} 24-hour, \code{"mm"} minute,
+\code{"ss"} second); see
+\url{https://date-fns.org/docs/format} for the available tokens}
 
 \item{style}{inline CSS for the container}
 }

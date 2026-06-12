@@ -78832,7 +78832,7 @@ class MUIwidget extends React.PureComponent {
       value: this.state.value,
       onChange: this.onChange,
       ampm: false,
-      format: "yyyy/MM/dd HH:mm",
+      format: this.props.format,
       label: this.props.label,
       disableFuture: this.props.disableFuture,
       disablePast: this.props.disablePast,
@@ -78868,7 +78868,8 @@ var MUIinput = _ref3 => {
     value: configuration.value,
     label: configuration.label,
     disableFuture: configuration.disableFuture,
-    disablePast: configuration.disablePast
+    disablePast: configuration.disablePast,
+    format: configuration.format || "yyyy-MM-dd'T'HH:mm:ss"
   });
 };
 (0,reactR__WEBPACK_IMPORTED_MODULE_0__.reactShinyInput)('.datetimeMaterialPicker', 'shinyDatetimePickers.datetimeMaterialPicker', MUIinput);

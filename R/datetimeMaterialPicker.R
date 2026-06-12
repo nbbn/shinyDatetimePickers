@@ -9,6 +9,11 @@
 #'   if \code{NULL}, it is set to the current time
 #' @param disablePast logical, whether to disable past dates
 #' @param disableFuture logical, whether to disable future dates
+#' @param format a character string giving the date-time display format of the
+#'   input field, using \code{date-fns} tokens (e.g. \code{"yyyy"} for the year,
+#'   \code{"MM"} month, \code{"dd"} day, \code{"HH"} 24-hour, \code{"mm"} minute,
+#'   \code{"ss"} second); see
+#'   \url{https://date-fns.org/docs/format} for the available tokens
 #' @param style inline CSS for the container
 #'
 #' @importFrom reactR createReactShinyInput
@@ -50,10 +55,12 @@
 datetimeMaterialPickerInput <- function(
   inputId, label = NULL, value = NULL,
   disablePast = FALSE, disableFuture = FALSE,
+  format = "yyyy-MM-dd'T'HH:mm:ss",
   style = NULL
 ) {
   label <- if(!is.null(label)) as.character(label)
   value <- if(is.null(value)) Sys.time() else as.POSIXct(value)
+  stopifnot(is.character(format), length(format) == 1L)
   reactR::createReactShinyInput(
     inputId,
     "datetimeMaterialPicker",
@@ -73,7 +80,8 @@ datetimeMaterialPickerInput <- function(
       value = datetime2list(value, sec = TRUE),
       label = label,
       disableFuture = disableFuture,
-      disablePast = disablePast
+      disablePast = disablePast,
+      format = format
     ),
     container = function(...) htmltools::tags$div(..., style = style)
   )
