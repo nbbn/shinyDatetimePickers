@@ -10,7 +10,7 @@ datetimeMaterialPickerInput(
   value = NULL,
   disablePast = FALSE,
   disableFuture = FALSE,
-  format = "yyyy-MM-dd'T'HH:mm:ss",
+  format = "yyyy-MM-dd HH:mm:ss",
   style = NULL
 )
 }

@@ -55,7 +55,7 @@
 datetimeMaterialPickerInput <- function(
   inputId, label = NULL, value = NULL,
   disablePast = FALSE, disableFuture = FALSE,
-  format = "yyyy-MM-dd'T'HH:mm:ss",
+  format = "yyyy-MM-dd HH:mm:ss",
   style = NULL
 ) {
   label <- if(!is.null(label)) as.character(label)
