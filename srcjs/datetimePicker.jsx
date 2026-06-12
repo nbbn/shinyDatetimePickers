@@ -415,7 +415,7 @@ const MUIinput = ({ configuration, value, setValue }) => {
       label={configuration.label}
       disableFuture={configuration.disableFuture}
       disablePast={configuration.disablePast}
-      format={"yyyy"}
+      format={"PPpp"}
     />
   );
 };
